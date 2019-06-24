@@ -1,15 +1,19 @@
 // Navigation code here'
+.container{
+
+
 .header-content {
     .flex(space-around, center);
     flex-wrap: wrap;
     width: 100%;
     padding: 20px;
-    background-color: lightgray;
+    background-color: lightcyan;
 
     .space-man{
+        display: flex;
         font-size: 2.5rem;
-        width: 40%;
-        align-content: flex-end;
+        width: 100%;
+        justify-content: center;
         padding-left: 2rem;
         margin-bottom: 2rem;
     }
@@ -17,7 +21,7 @@
        
 
     nav {
-        .flex(space-around, center);
+        .flex(space-between, center);
         width: 75%;
         flex-wrap: wrap;
 
@@ -37,17 +41,55 @@
             display: flex;
             align-content: center;
             justify-content: center;
-            color: white;
-            background-color: black;
-            border-radius: 5px;
+            .button(black, white);
         }
-
-        
-            @media(max-width: 515px){
-                .space-images.sky{
+        // @phone: ~"(max-width: 500px)";
+        .space-images{
+            @media @phone {
+                .sky{
                     display: none;
                 }
-            
+                .launch{
+                    display: none;
+                }
+                .blast{
+                    height: 90%;
+                    width:  90%;
+                }
+                
+            }
         
         }
-    
+
+        .walk{
+                width: 100%;
+                // background-color: pink;
+
+            @media @phone {
+                    .flex(flex-start, baseline);
+                    
+                    flex-direction: column-reverse;                   
+
+                    .walk-text{
+                        width: 100%;
+                    
+                    }
+
+                    .btn{
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        align-items: center;
+                        border: 4px;
+                    }
+                    
+                    .walk-img{
+                        width: 100%;
+                        height: 100%;
+                        
+                    }
+            
+                }
+            }
+        
+        }
