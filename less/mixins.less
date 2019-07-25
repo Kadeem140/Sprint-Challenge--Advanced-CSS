@@ -1,1 +1,12 @@
 // Mixins Here
+ .flex(@justify, @align){
+    display: flex;
+   justify-content: @justify;
+    align-items: @align;
+}
+
+.button(@background, @color){
+    border-radius: 5px;
+    background-color: @background;
+    color: @color;
+}
